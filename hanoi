@@ -1,0 +1,33 @@
+package element;
+
+public class tower 
+{
+static int count=1;
+	public static void main(String[]arg)
+	{
+	
+	System.out.println("Hanoi Game");
+	
+	move(4, " A "," B ", " C ");
+	}
+public static void move(int n, String start,String temp, String end)
+{
+
+if(n==1)
+{
+ 	System.out.println(count+ " move " + start +" to " +end);
+count++; 
+ 	
+}
+else
+{
+	move(n-1, start , end , temp);
+	System.out.println(count + " move " +  count  + " to " + end);
+	count++;
+	move(n-1, temp , start , end);
+}
+	
+	
+}
+
+}
